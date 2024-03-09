@@ -90,7 +90,7 @@ export default {
       fetch(url)
           .then(response => response.json())
           .then(data => {
-            if (data === -1) {
+            if (data.length > 4) {
               this.error = 'Usage of selected vehicle type is forbidden';
               return;
             }
